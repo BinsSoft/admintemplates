@@ -66,6 +66,7 @@ header .navbar-nav{
 }
 .side-bar li.active .sub-nav {
 	background: #2d353c;
+	padding-bottom: 5px;
 }
 .side-bar li.active a {
 	color: #FFF;
@@ -75,6 +76,21 @@ header .navbar-nav{
 }
 .sub-nav {
 	display: none;
+}
+.sub-nav li {
+	list-style: none;
+	border-left: 1px solid #636363;
+}
+.sub-nav li:last-of-type a {
+	padding-bottom: 0;
+}
+.sub-nav li::before {
+	content: '\2192';
+    color: #636363;
+    float: left;
+    margin-top: 4px;
+    font-size: 20px;
+    margin-left: -4px;
 }
 .sub-nav.active {
 	display: block;
@@ -104,6 +120,7 @@ header .navbar-nav{
 .body-container .content{
 	background: #FFF;
 	margin-top: 10px;
+	padding: 10px 0px;
 }
 
 .body-container-header .sub-title {
@@ -123,4 +140,26 @@ header .navbar-nav{
 .sub-heading {
     border-bottom: 1px solid #CCC;
     padding-bottom: 10px;
+}
+#page-loader {
+	position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #E6E8EC;
+    z-index: 9999
+}
+.spinner {
+	-webkit-animation: rotation .6s infinite linear;
+    animation: rotation .6s infinite linear;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    border: 2px solid rgba(0,0,0,.5);
+    border-top: 2px solid #fff;
+    border-radius: 100%;
 }
