@@ -32,7 +32,14 @@ header a:hover {
 header .navbar-nav{
     margin: 7px 10px 0 0;
 }
-
+footer {
+	position: fixed;bottom: 0;
+	width: 100%;
+	background: #2d353c;
+	color: #FFF;
+	font-size: 10px;
+    padding-left: 5px;
+}
 .main-container {
 	margin-top: 25px;
 	padding: 0;
@@ -85,7 +92,7 @@ header .navbar-nav{
 	padding-bottom: 0;
 }
 .sub-nav li::before {
-	content: '\2192';
+    content: '\2192';
     color: #636363;
     float: left;
     margin-top: 4px;
@@ -162,4 +169,7 @@ header .navbar-nav{
     border: 2px solid rgba(0,0,0,.5);
     border-top: 2px solid #fff;
     border-radius: 100%;
+}
+.body-container .content .table .btn {
+	border-radius: 100%;
 }

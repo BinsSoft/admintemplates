@@ -22,18 +22,8 @@ loadScript();
 /* All plugins load successfully */
 
 $(()=>{
-	let documentHeight = $(document).height();
-	documentHeight -= $(".header").height(); 
-	$(".main-container").height(documentHeight);
-	$('.side-bar').slimScroll({
-		height: documentHeight,
-		width : 230
-	});
-	$('.body-container').slimScroll({
-		height: documentHeight,
-		width : $(document).width()-230
-	});
 	
+	resizeContainer();
 	$(".has-sub-menu").click((event)=>{
 		const element = $(event.target);
 		$(".sub-nav").hide();
@@ -44,3 +34,16 @@ $(()=>{
 		});
 	})
 })
+const resizeContainer = ()=>{
+	let documentHeight = $(window).height();
+	documentHeight -= $("header").height(); 
+	//$(".main-container").height(documentHeight);
+	$('.side-bar').slimScroll({
+		height: documentHeight-15,
+		width : 230
+	});
+	$('.body-container').slimScroll({
+		height: documentHeight-15,
+		width : $(document).width()-230
+	});
+}
